@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1538868738 source:c:\users\joaco\documents\facultad joaco\parcialprueba\main.c
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaNunez.h"
+
+1538867863 c:\users\joaco\documents\facultad joaco\parcialprueba\biblotecanunez.h
+
