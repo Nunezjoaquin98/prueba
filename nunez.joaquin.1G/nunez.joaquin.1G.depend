@@ -25,3 +25,57 @@
 
 1539039532 source:d:\nunez.joaquin.1g\alquiler.c
 
+1539301570 source:c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\biblotecanunez.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaNunez.h"
+
+1539301462 c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\biblotecanunez.h
+
+1539379519 source:c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\cliente.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaNunez.h"
+	"cliente.h"
+
+1539303026 c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\cliente.h
+
+1539379735 source:c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"biblotecaNunez.h"
+	"cliente.h"
+	"juegos.h"
+	"alquileres.h"
+
+1539299036 source:c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\categoria.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaNunez.h"
+
+1539373838 source:c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\juegos.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaNunez.h"
+	"juegos.h"
+
+1539299853 c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\categoria.h
+
+1539373874 c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\juegos.h
+
+1539379562 source:c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\alquileres.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaNunez.h"
+	"cliente.h"
+	"juegos.h"
+	"alquileres.h"
+
+1539379800 c:\users\joaco\downloads\prueba-master\prueba-master\nunez.joaquin.1g\alquileres.h
+

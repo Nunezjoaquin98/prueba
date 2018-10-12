@@ -27,6 +27,7 @@ int searchEmpty(eCliente list[],int len)
     return index ;
 }
 
+
 int menu ( )
 {
     char auxOption[2];
@@ -68,7 +69,7 @@ int menuClientes ( )
 }
 
 
-int addCliente(eCliente list[],int len)
+int addCliente(eCliente list[],int len,int flagCliente)
 {
     eCliente newCliente;
 
@@ -125,10 +126,12 @@ int addCliente(eCliente list[],int len)
                 strcpy(newCliente.nombre,auxName);
                 strcpy(newCliente.sexo,auxSex);
                 newCliente.telefono = atoi(auxTelefono);
+                newCliente.isEmpty = 0 ;
                 list[index] = newCliente ;
                 system("pause");
                 system("cls");
                 printf("\n\nEMPLEADO DADO DE ALTA CON EXITO:\n\n");
+                flagCliente = 1 ; // se pone en true la bandera para saber que se creo un cliente
                 showCliente(list[index]);
                 printf("\n\n\n");
                 system("pause");
@@ -181,9 +184,9 @@ void modifyCliente(eCliente list[], int len)
 
     system("cls");
     printf("  *** Modificar  Cliente ***\n\n");
+    showClientes(list,len);
 
-
-    if(!function_getStringNumeros("Ingrese el codigo del cliente: ",auxCode))
+    if(!function_getStringNumeros("\nIngrese el codigo del cliente a modificar: ",auxCode))
     {
         printf("*** ERROR *** El codigo debe contener solo numeros.") ;
     }
@@ -312,7 +315,7 @@ int removeCliente(eCliente list[], int len)
 
             if(index == -1)
             {
-                printf("No hay ningun cliente con codigo %d",code) ;
+                printf("No hay ningun cliente con codigo %d",codeFinal) ;
             }
             else
             {
@@ -339,27 +342,34 @@ int removeCliente(eCliente list[], int len)
 
 void listarClientes(eCliente list[], int len)
 {
-    eCliente auxCliente;
-    for(int i = 0; i < len - 1; i++)
+
+    eCliente aux;
+    if(len > 0 && list != NULL)
     {
-        for(int j = i + 1; j < len; j++)
-        {
-            if(strcmp(list[j].nombre, list[i].nombre) < 0  && list[j].isEmpty == 0 && list[i].isEmpty == 0)
+
+            for(int i = 0; i < len - 1; i++)
             {
-                auxCliente = list[i];
-                list[i] = list[j];
-                list[j] = auxCliente;
+                for(int j = i + 1; j < len; j++)
+                {
+                    if(strcmp(list[j].sexo, list[i].sexo) > 0 && list[j].isEmpty == 0 && list[i].isEmpty == 0)
+                    {
+                        aux = list[i];
+                        list[i] = list[j];
+                        list[j] = aux;
+                    }
+                    else if(strcmp(list[j].sexo, list[i].sexo) == 0 && list[j].nombre > list[i].nombre  && list[j].isEmpty == 0 && list[i].isEmpty == 0)
+                    {
+                        aux = list[i];
+                        list[i] = list[j];
+                        list[j] = aux;
+                    }
+                }
             }
-           if(strcmp(list[j].nombre, list[i].nombre) == 0 && strcmp(list[j].sexo,list[i].sexo)  && list[j].isEmpty == 0 && list[i].isEmpty == 0)
-            {
-                auxCliente = list[i];
-                list[i] = list[j];
-                list[j] = auxCliente;
-            }
-        }
+
+
+
     }
-    printf("ORDEDO CON EXITO\n\n\n") ;
-    system("pause") ;
+
 }
 
 

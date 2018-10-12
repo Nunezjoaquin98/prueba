@@ -139,51 +139,63 @@ void function_continueYesOrNo(char msj[],char input[])
     while(!(input[0] == 's' || input[0] == 'n' || input[0] == 'S' || input[0] == 'N'));
 
 }
-/*
-void harcodeoCategoria(eCategoria* list)
+
+
+
+int validarChar(char str[])
 {
-    eCategoria   x[]={
-    {1,"Disparos"},
-    {2,"Deportes"},
-    {3,"Aventura"}
-    };
-    for(int i = 0; i< 3;i++)
+   int i=0;
+   while(str[i] != '\0')
+   {
+       if((str[i] != ' ') && (!(str[i] == 'f' || str[i] =='m' || str[i] =='F' || str[i] == 'M')) )
+           return 0;
+       i++;
+   }
+   return 1;
+}
+
+
+int function_getStringChar(char mensaje[],char input[])
+{
+    char aux[2];
+    function_getString(mensaje,aux);
+    if(validarChar(aux))
     {
-        list[i] = x[i];
+        strcpy(input,aux);
+        return 1;
     }
-
+    return 0;
 }
 
 
- void harcodeoJuego(eJuego* list)
+int esNumeroFlotante(char str[])
 {
-    eJuego   x[]={
-    {1,"Fornite",70, 1},
-    {7,"FIFA 19",300,2},
-    {9,"Minecraft",180,3},
-    {19,"PES 19",250, 2},
-    {1,"Crash",15,3}
-    };
-    for(int i = 0; i< 5;i++)
+   int i=0;
+   int contPuntos=0;
+   while(str[i] != '\0')
+   {
+       if (str[i] == '.' && contPuntos == 0)
+       {
+           contPuntos++;
+           i++;
+           continue;
+
+       }
+       if(str[i] < '0' || str[i] > '9')
+           return 0;
+       i++;
+   }
+   return 1;
+}
+
+int function_getStringNumeroFlotante(char mensaje[],char input[])
+{
+    char aux[256];
+    function_getString(mensaje,aux);
+    if(esNumeroFlotante(aux))
     {
-        list[i] = x[i];
+        strcpy(input,aux);
+        return 1;
     }
+    return 0;
 }
-
-void showJuego(eJuego list)
-{
-     printf("\n %d\t\t%s\t\t%.2f\t\t%d\n",list.codigo,list.descrpicion,list.importe,list.idCategoria.id);
-}
-
-void showJuegos(eJuego list[],int len)
-{
-    system("cls");
-    printf("\n\n\tCODIGO\t\tDESCRIPCION\t\tIMPORTE\t\tCATEGORIA");
-
-    for(int i=0; i<len; i++)
-    {
-      showJuego(list[i]) ;
-    }
-
-}
-*/

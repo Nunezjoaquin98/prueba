@@ -47,6 +47,12 @@ int searchEmpty(eCliente list[],int len) ;
  */
 void showCliente(eCliente list) ;
 
+/** \brief modifica un cliente
+ *
+ * \param array de cliente
+ * \param tamaño del array
+ *
+ */
 void modifyCliente(eCliente list[], int len) ;
 
 /** \brief se ingresa el codigo del cliente y lo encuentra
@@ -74,7 +80,7 @@ void listarClientes(eCliente list[], int len) ;
 * \return  int Return (-1) if Error [Invalid length or NULL pointer or without
  * free space] - (0) if Ok
 */
-int addCliente(eCliente list[],int len) ;
+int addCliente(eCliente list[],int len,int flagCliente) ;
 
 /** \brief  Da de baja de el cliente
  *

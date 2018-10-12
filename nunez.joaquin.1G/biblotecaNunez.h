@@ -147,3 +147,40 @@ int menu ( ) ;
  *
  */
 //void showJuegos(eJuego list[],int len) ;
+
+
+/** \brief solicita un char y se fija si es valido
+ *
+* \param
+ * \return 0 si es valido el character.
+ *
+ */
+int validarChar(char str[]) ;
+
+
+ /**
+ * \brief Solicita un char al usuario y lo devuelve validado.
+ * \param char array mensaje a ser mostrado
+ * \param char array donde se cargará el texto ingresado
+ * \return 1 si el texto contiene solo letras
+ */
+int function_getStringChar(char mensaje[],char input[]) ;
+
+
+
+/**
+ * \brief Verifica si el valor recibido es numérico aceptando flotantes
+ * \param str Array con la cadena a ser analizada
+ * \return 1 si es númerico y 0 si no lo es
+ *
+ */
+int esNumeroFlotante(char str[]) ;
+
+
+/**
+ * \brief Solicita un texto numérico al usuario y lo devuelve (acepta flotantes)
+ * \param mensaje Es el mensaje a ser mostrado
+ * \param input Array donde se cargará el texto ingresado
+ * \return 1 si el texto contiene solo números
+ */
+int function_getStringNumeroFlotante(char mensaje[],char input[]) ;
