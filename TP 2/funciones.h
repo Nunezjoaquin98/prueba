@@ -136,3 +136,10 @@ int function_getStringNumeros(char msj[],char input[]) ;
  *
  */
 int menu ( ) ;
+
+/** \brief Menu de opciones para modificar el empleado
+ *
+ * \return Opcion ingresada
+ *
+ */
+int menuModificar ();

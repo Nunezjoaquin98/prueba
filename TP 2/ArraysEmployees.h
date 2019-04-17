@@ -28,14 +28,6 @@ int initEmployees(eEmployee list[], int len) ;
  */
  int searchEmpty(eEmployee list[],int len);
 
-/** \brief add in a existing list of employees the values received as parameters
- * in the first empty position
- * \param list employee
- * \param len int
- * \param int flag to know if an employees it's created
- * \return  int Return (-1) if Error [Invalid length or NULL pointer or without
- * free space] - (0) if Ok
-*/
 
 /** \brief  find an Employee by Id en returns the index position in array.
  *
@@ -47,5 +39,36 @@ int initEmployees(eEmployee list[], int len) ;
  */
  int findEmployeeById(eEmployee list[], int len, int id) ;
 
+ /** \brief show employee of a list
+  *
+  * \param array
+  *
+  */
+void showEmployee(eEmployee list);
 
-// int addEmployee(eEmployee list[], int len) ;
+ /** \brief show employee of a list
+  *
+  * \param array employee
+  * \param lenght int
+  *
+  */
+void showEmployees(eEmployee list[],int len);
+
+/** \brief add in a existing list of employees the values received as parameters
+ * in the first empty position
+ * \param list employee*
+* \return int Return (-1) if Error [Invalid length or NULL pointer or without
+free space] - (0) if Ok
+ */
+int addEmployee(eEmployee list[], int len) ;
+
+void modifyEmployee(eEmployee list[], int len) ;
+
+
+ /** \brief carga una lista de empleados
+  *
+  * \param array employee
+  *
+  */
+void hardcodeoEmpleados(eEmployee* list);
+

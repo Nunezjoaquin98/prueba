@@ -186,3 +186,17 @@ int menu ( )
     option = atoi(auxOption) ;
     return option;
 }
+int menuModificar ()
+{
+    char auxOption[2];
+    int option;
+    printf("\n\n*** Modificar empleado ***\n\n1 - Nombre\n2 - Apellido\n3 - Sueldo\n4 - Sector\n5 - Regresar al menu principal\n\n");
+while(!function_getStringNumeros("Ingrese opcion: ",auxOption))
+{
+    printf("*** Error *** Debe ingresar un numero.\n");
+    system("pause");
+    printf("\n");
+}
+    option = atoi(auxOption);
+    return option;
+}

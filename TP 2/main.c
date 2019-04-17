@@ -10,17 +10,23 @@ int main()
     eEmployee empleados[SIZE]; // se crea un arrays tipo eEmployee con el tamaño de 1000
 
     initEmployees(empleados,SIZE); // Se inicializa todos los empleados en 1.
-
+    hardcodeoEmpleados(empleados);
     do
     {
         switch(menu())
         {
 
 
-
-
-
-
+        case 1:
+        addEmployee(empleados,SIZE);
+        break;
+        case 2:
+        modifyEmployee(empleados,SIZE);
+        break;
+        case 4:
+        showEmployees(empleados,SIZE);
+        system("pause");
+        break;
         case 5:
             printf("\n\t***Saliendo***\n\n");
             salir = 's';
