@@ -23,6 +23,8 @@ int main()
         case 2:
         modifyEmployee(empleados,SIZE);
         break;
+        case 3:
+
         case 4:
         showEmployees(empleados,SIZE);
         system("pause");

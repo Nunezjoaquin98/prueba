@@ -58,7 +58,7 @@ int findEmployeeById(eEmployee list[], int len, int id)
 void showEmployees(eEmployee list[],int len)
 {
     system("cls");
-    printf("\n\n\tID\t\tNOMBRE\t\tAPELLIDO\t\tSALARIO\t\tSECTOR\n");
+    printf("\n\nID\t\tNOMBRE\t\tAPELLIDO\t\tSALARIO\t\tSECTOR\n");
 
     for(int i=0; i<len; i++)
     {
@@ -72,7 +72,7 @@ void showEmployees(eEmployee list[],int len)
 
 void showEmployee(eEmployee list)
 {
-    printf("\n\t%d\t\t%s\t\t%s\t\t%.2f\t\t%d\n",list.id,list.name,list.lastName,list.salary,list.sector);
+    printf("\n%d\t\t%s\t\t%s\t\t%.2f\t%d\n",list.id,list.name,list.lastName,list.salary,list.sector);
 }
 
 int addEmployee(eEmployee list[], int len)
