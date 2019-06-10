@@ -13,7 +13,37 @@
 int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 {
 
-    return 1;
+ int ret = 0;
+ int r;
+ char a[50];
+ char b[50];
+ char c[50];
+ char d[50];
+
+ pFile = fopen("data.csv","r");
+ if(pFile == NULL)
+ {
+ printf("El archivo no existe\n");
+system("pause");
+ }
+ do
+ {
+ r = fscanf(pFile,"%[^,],[^,],[^,],[^,]\n",a,b,c,d);
+ if(r==4)
+ {
+     Employee* auxEmployee = employee_new();
+     employee_setId(auxEmployee,atoi(a));
+     employee_setNombre(auxEmployee,b);
+     employee_setHorasTrabajadas(auxEmployee,atoi(c));
+     employee_setSueldo(auxEmployee,atoi(d));
+    ret = 1;
+ }
+ break;
+ }while(!feof(pFile));
+
+
+ fclose(pFile);
+ return ret;
 }
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).

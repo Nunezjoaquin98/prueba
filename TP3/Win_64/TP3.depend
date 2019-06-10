@@ -80,13 +80,13 @@
 
 1533133022 d:\joaco\tp3\win_64\controller.h
 
-1533133022 source:d:\joaco\tp3\win_64\parser.c
+1560209516 source:d:\joaco\tp3\win_64\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1560207843 source:d:\joaco\tp3\win_64\employee.c
+1560209516 source:d:\joaco\tp3\win_64\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

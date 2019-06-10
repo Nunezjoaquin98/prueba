@@ -4,6 +4,20 @@
 #include "Funciones.h"
 #include "Employee.h"
 
+
+Employee* employee_new()
+{
+
+    Employee* nuevo;
+
+    nuevo = (Employee*)malloc(sizeof(Employee));
+
+    return nuevo;
+
+
+}
+
+
 int employee_setId(Employee* this,int id)
 {
     int ret = 0;
