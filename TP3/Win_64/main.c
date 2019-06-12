@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#include "funciones.h"
 
 /****************************************************
     Menu:
@@ -21,15 +22,50 @@
 
 int main()
 {
-    int option = 0;
+    int salir = 0;
     LinkedList* listaEmpleados = ll_newLinkedList();
-    do{
-        switch(option)
+    do
+    {
+        switch(menu())
         {
-            case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
-                break;
+        case 1:
+            if(controller_loadFromText("data.csv",listaEmpleados))
+            {
+                system("cls");
+                printf("Se cargo correctamente...\n");
+                system("pause");
+            }
+            else
+            {
+                system("cls");
+                printf("No se pudo cargar correctamente...\n");
+                system("pause");
+            }
+            break;
+        case 2:
+            if(controller_loadFromBinary("data.csv",listaEmpleados))
+            {
+                system("cls");
+                printf("Se cargo correctamente...\n");
+                system("pause");
+            }
+            else
+            {
+                system("cls");
+                printf("No se pudo cargar correctamente...\n");
+                system("pause");
+            }
+            break;
+        case 10:
+            printf("\nSaliendo...\n\n");
+            salir = 1;
+            break;
+        default:
+            printf("\nERROR - Debe ingresar un numero del 1 al 10.\n");
+            system("pause");
+            system("cls");
+            break;
         }
-    }while(option != 10);
+    }while(salir == 0);
     return 0;
 }

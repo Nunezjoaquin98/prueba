@@ -53,43 +53,47 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1533133026 source:d:\joaco\tp3\win_64\controller.c
+1560293361 source:d:\joaco\tp3\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
+	"parser.h"
 	"Employee.h"
 
-1533133022 d:\joaco\tp3\win_64\linkedlist.h
+1560209965 d:\joaco\tp3\win_64\linkedlist.h
 
-1533133022 d:\joaco\tp3\win_64\employee.h
+1560209965 d:\joaco\tp3\win_64\employee.h
 
-1560206016 source:d:\joaco\tp3\win_64\funciones.c
+1560294098 source:d:\joaco\tp3\win_64\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Funciones.h"
 
-1560206016 d:\joaco\tp3\win_64\funciones.h
+1560209965 d:\joaco\tp3\win_64\funciones.h
 
-1533133026 source:d:\joaco\tp3\win_64\main.c
+1560297553 source:d:\joaco\tp3\win_64\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Controller.h"
 	"Employee.h"
+	"funciones.h"
 
-1533133022 d:\joaco\tp3\win_64\controller.h
+1560209965 d:\joaco\tp3\win_64\controller.h
 
-1560209516 source:d:\joaco\tp3\win_64\parser.c
+1560294975 source:d:\joaco\tp3\win_64\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1560209516 source:d:\joaco\tp3\win_64\employee.c
+1560294320 source:d:\joaco\tp3\win_64\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Funciones.h"
 	"Employee.h"
+
+1560209965 d:\joaco\tp3\win_64\parser.h
 

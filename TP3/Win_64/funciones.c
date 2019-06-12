@@ -171,15 +171,12 @@ int menu ( )
     char auxOption[2];
     int option;
     system("cls") ;
-    printf("\n\t\t*** Menu de Opciones ***\n\n");
-    printf("1-ALTAS \n");
-    printf("2-MODIFICAR \n") ;
-    printf("3-BAJAS \n");
-    printf("4-INFORMAR \n");
-    printf("5-SALIR\n\n") ;
+    printf("**********************************************************************************************************************\n");
+    printf("Menu:\n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n2. Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n3. Alta de empleado\n4. Modificar datos de empleado\n5. Baja de empleado\n6. Listar empleados\n7. Ordenar empleados\n8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n9. Guardar los datos de los empleados en el archivo data.csv (modo binario).\n\n10. Salir\n");
+    printf("**********************************************************************************************************************\n");
     while(!function_getStringNumeros("Ingresar opcion: ",auxOption))
     {
-        printf("\n*** ERROR *** Debe ingresar un numero del 1 al 5. \n") ;
+        printf("\n*** ERROR *** Debe ingresar un numero del 1 al 10 \n") ;
         system("pause") ;
 
     }
@@ -191,12 +188,12 @@ int menuModificar ()
     char auxOption[2];
     int option;
     printf("\n\n*** Modificar empleado ***\n\n1 - Nombre\n2 - Apellido\n3 - Sueldo\n4 - Sector\n5 - Regresar al menu principal\n\n");
-while(!function_getStringNumeros("Ingrese opcion: ",auxOption))
-{
-    printf("*** Error *** Debe ingresar un numero.\n");
-    system("pause");
-    printf("\n");
-}
+    while(!function_getStringNumeros("Ingrese opcion: ",auxOption))
+    {
+        printf("*** Error *** Debe ingresar un numero.\n");
+        system("pause");
+        printf("\n");
+    }
     option = atoi(auxOption);
     return option;
 }
